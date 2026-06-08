@@ -1,6 +1,6 @@
 import streamlit as st
 from PyPDF2 import PdfReader
-from gTTS import gTTS
+from gtts import gTTS
 from deep_translator import GoogleTranslator
 import io
 
