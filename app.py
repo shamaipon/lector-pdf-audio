@@ -3,6 +3,7 @@ from PyPDF2 import PdfReader
 from gtts import gTTS
 from deep_translator import GoogleTranslator
 import io
+import time
 
 # Configuración de la página
 st.set_page_config(page_title="PDF a Audio", page_icon="🎧", layout="centered")
@@ -48,6 +49,7 @@ if archivo_pdf is not None:
                     for fragmento in fragmentos:
                         traduccion = GoogleTranslator(source='en', target='es').translate(fragmento)
                         texto_traducido += traduccion + " "
+                        time.sleep(2)
                     
                     texto_final = texto_traducido
                     idioma_voz = 'es'
